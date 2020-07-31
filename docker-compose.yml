@@ -18,6 +18,10 @@ services:
     ports: 
       - ${DB_PORT}:1433
 
+  license:
+    image: docker.totvs.io/dcp/license
+    container_name: protheus_license
+    
   dbaccess:
     build: ./docker/totvs-dbaccess-docker
     container_name: protheus_dbaccess
@@ -32,9 +36,11 @@ services:
       - DB_NAME=${DB_NAME}
     depends_on: 
       - database
+      - license
 
   appserver:
     build: ./docker/totvs-appserver-docker
+    container_name: protheus_appserver
     ports:
       - 9999:9999
     user: root
@@ -47,6 +53,7 @@ services:
       - ${PROTHEUS_APO_PATH}:/totvs12/protheus/apo
     depends_on: 
       - dbaccess
+      - license
 
 volumes:
   dbdata: {}

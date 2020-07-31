@@ -11,3 +11,6 @@ DBACCESS_PORT=7890
 
 PROTHEUS_DATA_PATH=./protheus12/protheus_data
 PROTHEUS_APO_PATH=./protheus12/protheus/apo/
+
+LICENSE_SERVER=protheus_license
+LICENSE_SERVER_PORT=5555
