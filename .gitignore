@@ -2,3 +2,4 @@
 docker/protheus12/*
 .env
 .vscode
+.DS_STORE
