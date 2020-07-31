@@ -1,7 +1,7 @@
-DB_TYPE=mssql
-DB_HOST=protheus_mssql
-DB_PORT=1433
-DB_USER=sa
+DB_TYPE=postgres
+DB_HOST=protheus_database
+DB_PORT=5432
+DB_USER=protheus
 DB_PASS=A123456b
 DB_NAME=PROTHEUS
 
@@ -10,7 +10,9 @@ DBACCESS_ALIAS=PROTHEUS
 DBACCESS_PORT=7890
 
 PROTHEUS_DATA_PATH=./docker/protheus12/protheus_data
-PROTHEUS_APO_PATH=./docker/protheus12/protheus/apo
+PROTHEUS_APO_PATH=./docker/protheus12/protheus/apo/
 
 LICENSE_SERVER=protheus_license
 LICENSE_SERVER_PORT=5555
+
+PG_DATA=/Users/danielalbuquerque/Protheus/docker/database
