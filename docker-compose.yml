@@ -1,0 +1,37 @@
+version: '3.6'
+
+services:
+
+  database:
+    image: "mcr.microsoft.com/mssql/server:2017-latest"
+    command: /bin/bash ./entrypoint.sh
+    container_name: protheus_mssql
+    environment:
+      SA_PASSWORD: ${DB_PASS}
+      ACCEPT_EULA: "Y"
+      MSSQL_DB: ${DB_NAME}
+    volumes:
+      - dbdata:/var/opt/mssql/data
+      - ./docker/mssql/entrypoint.sh:/entrypoint.sh
+      - ./docker/mssql/dbinit.sh:/dbinit.sh
+      - ./docker/mssql/dbinit.sql:/dbinit.sql
+    ports: 
+      - ${DB_PORT}:1433
+
+  dbaccess:
+    build: ./docker/totvs-dbaccess-docker
+    container_name: protheus_dbaccess
+    ports:
+      - 7890:7890
+    environment:
+      - DB_TYPE=${DB_TYPE}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+    depends_on: 
+      - database
+
+volumes:
+  dbdata: {}
