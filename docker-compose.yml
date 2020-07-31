@@ -3,7 +3,7 @@ version: '3.6'
 services:
 
   database:
-    image: postgres
+    build: ./docker/totvs-dbaccess-docker/postgres
     container_name: protheus_database
     environment:
       POSTGRES_DB: ${DB_NAME}
@@ -17,6 +17,10 @@ services:
   license:
     image: docker.totvs.io/dcp/license
     container_name: protheus_license
+    ports:
+      - "8081:8081"
+      - "5555:5555"
+      - "8084:8084"
     
   dbaccess:
     build: ./docker/totvs-dbaccess-docker
