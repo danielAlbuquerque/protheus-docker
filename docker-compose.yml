@@ -36,8 +36,7 @@ services:
   appserver:
     build: ./docker/totvs-appserver-docker
     ports:
-      - 8081:8081
-      - 8080:8080
+      - 9999:9999
     user: root
     environment:
       - DBACCESS_SERVER=${DBACCESS_SERVER}
@@ -48,6 +47,6 @@ services:
       - ${PROTHEUS_APO_PATH}:/totvs12/protheus/apo
     depends_on: 
       - dbaccess
-      
+
 volumes:
   dbdata: {}

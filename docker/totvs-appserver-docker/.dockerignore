@@ -1,0 +1,7 @@
+Dockerfile
+.dockerignore
+.git
+./midia
+./totvs-downloads
+./totvs11
+prepare-totvs11-rootfs.sh

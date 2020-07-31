@@ -1,0 +1,46 @@
+  - totvs11microsigaprotheus-server-11.0-1.i586.rpm
+  - totvs11microsigaprotheus-rpo-all-top-por-11.0-1.i586.rpm
+  - totvs11microsigaprotheus-systemload-bra-11.0-1.i586.rpm
+  - totvs11microsigaprotheus-systemload-general-por-11.0-1.i586.rpm
+  - totvs11microsigaprotheus-data-11.0-1.i586.rpm
+
+  Não instalei o hlppo, HELP é desnecessário aqui :
+  
+  - totvs11microsigaprotheus-systemload-bra-hlppor-11.0-1.i586.rpm
+
+  Remover pastas `desnecessárias` para gerar imagem menor
+
+  protheus_data/samples/
+  protheus/bin/smarclient/
+  protheus/my\ projects/
+
+  * Processo de atualização da imagem
+  
+  Um forma de executar o processo de atualização do container é usar alguma diretiva
+  ONBUILD e verificar se existe algo numa pasta ou volume /update que contenhas as atualizações
+  este processo iria descompactar os arquivos, e substituir o conteúdo da pasta de :
+  
+  * binários
+  * rop
+  * include
+  * libs
+  * updates
+  * etc
+  
+  
+  ulimit -n 32768
+  ulimit -s 1024
+  ulimit -m 2048000
+  ulimit -v 2048000
+  
+  
+  $ ./appsrvlinux --help
+
+    opcao --help invalida!
+
+    -daemon:                       executa em background
+    -log_server:                   executa como servidor de logs
+    -balance_smart_client_desktop: executa como proxy para smart client desktop
+    -balance_html:                 executa como proxy para html
+    -balance_telnet:               executa como proxy telnet
+    -balance_web_services:         executa como proxy web services
