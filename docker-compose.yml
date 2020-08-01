@@ -1,4 +1,4 @@
-version: '3.6'
+version: '2.4'
 
 services:
 
@@ -16,6 +16,7 @@ services:
       - ./docker/mssql/dbinit.sql:/dbinit.sql
     ports: 
       - ${DB_PORT}:1433
+    mem_limit: 3000m
 
   license:
     image: docker.totvs.io/dcp/license
