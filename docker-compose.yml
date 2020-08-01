@@ -3,14 +3,13 @@ version: '3.6'
 services:
 
   database:
-    image: postgres
-    container_name: protheus_database
+    image: "mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04"
+    command: /bin/bash ./entrypoint.sh
+    container_name: protheus_mssql
     environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASS}
-    ports:
-      - "5432:5432"
+      SA_PASSWORD: ${DB_PASS}
+      ACCEPT_EULA: "Y"
+      MSSQL_DB: ${DB_NAME}
     volumes:
       - ./docker/mssql/entrypoint.sh:/entrypoint.sh
       - ./docker/mssql/dbinit.sh:/dbinit.sh
@@ -56,4 +55,4 @@ services:
       - license
 
 volumes:
-  pg_data: {}
+  mssql_data: {}
