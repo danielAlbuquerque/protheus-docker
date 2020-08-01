@@ -12,16 +12,12 @@ services:
     ports:
       - "5432:5432"
     volumes:
-<<<<<<< HEAD
       - ./docker/mssql/entrypoint.sh:/entrypoint.sh
       - ./docker/mssql/dbinit.sh:/dbinit.sh
       - ./docker/mssql/dbinit.sql:/dbinit.sql
     ports: 
       - ${DB_PORT}:1433
     mem_limit: 3000m
-=======
-      - pg_data:${PG_DATA}
->>>>>>> e699f4017c6c52b7c46168f0f9df9e32019623ec
 
   license:
     image: docker.totvs.io/dcp/license
