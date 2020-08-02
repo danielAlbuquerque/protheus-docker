@@ -18,7 +18,7 @@ services:
       - ${DB_PORT}:1433
 
   license:
-    image: docker.totvs.io/dcp/license
+    image: danielolalb/totvs_protheus_ls
     container_name: protheus_license
     
   dbaccess:
