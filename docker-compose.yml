@@ -42,6 +42,7 @@ services:
     container_name: protheus_appserver
     ports:
       - 9999:9999
+      - 8080:8080
     user: root
     environment:
       - DBACCESS_SERVER=${DBACCESS_SERVER}

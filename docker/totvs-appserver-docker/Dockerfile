@@ -1,6 +1,6 @@
 FROM centos:7
 
-LABEL maintainer "Enderson Maia <endersonmaia@gmail.com>"
+LABEL maintainer "Daniel Albuquerque <daniel.alb.querque@gmail.com>"
 
 RUN yum -y update \
     && yum -y install \
@@ -21,7 +21,7 @@ RUN DUMB_INIT_SHA256="37f2c1f0372a45554f1b89924fbb134fc24c3756efaedf11e07f599494
 
 COPY /build /build
 
-ADD 20-07-15-P12_APPSERVER_BUILD-19.3.0.5_LINUX_X64.TAR.GZ /totvs12/protheus/bin/appserver
+ADD 20-12-14-P12_APPSERVER_BUILD-19.3.1.4_LINUX_X64.TAR.GZ /totvs12/protheus/bin/appserver
 
 RUN /build/setup.sh
 
