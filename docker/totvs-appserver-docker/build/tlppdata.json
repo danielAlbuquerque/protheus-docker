@@ -1,6 +1,0 @@
-{
-  "Authorization": {
-    "scheme": "basic",
-    "OnAuth": "Albuquerque.Api.Security.U_ValidateCredentials"
-  }
-}

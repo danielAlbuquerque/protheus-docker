@@ -15,7 +15,5 @@ echo $TOTVS_PATH/"protheus/bin/appserver/" > /etc/ld.so.conf.d/appserver64-libs.
 
 cp /build/my-init.sh /usr/local/bin/my-init.sh
 cp /build/appserver.ini $TOTVS_PATH/protheus/bin/appserver/
-cp /build/tlpp.rpo $TOTVS_PATH/protheus/bin/appserver/
-cp /build/tlppdata.json $TOTVS_PATH/protheus/bin/appserver/
 
 rm -rf /build
