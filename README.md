@@ -2,11 +2,11 @@
 
 Tutorial: https://www.youtube.com/watch?v=wcMU0pqfZWA
 
-Download diretorio totvs12: https://drive.google.com/file/d/12j2g5AatUZxBBbNu09zpO-X-10t60cbg/view
+Arquivos necessarios: https://drive.google.com/drive/folders/1XzxgZrCf4l79nsoCWI-9ykMUS3T37FzM?usp=sharing
 
 # Binarios
 
-Copie os arquivos do diretorio "binaries" para docker/totvs-appserver-docker e docker/totvs-dbaccess-docker.
+Copie o arquivo o arquivo tar.gz do appserver para docker/totvs-appserver-docker e tar.gz do dbaccess para docker/totvs-dbaccess-docker.
 
 # Ambiente
 Crie uma copia do arquivo env-example com o nome .env
