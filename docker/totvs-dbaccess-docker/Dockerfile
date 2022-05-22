@@ -17,7 +17,7 @@ RUN DUMB_INIT_SHA256="37f2c1f0372a45554f1b89924fbb134fc24c3756efaedf11e07f599494
     && echo "37f2c1f0372a45554f1b89924fbb134fc24c3756efaedf11e07f599494e0eff9 */usr/bin/dumb-init" | sha256sum -c - \
     && chmod +x /usr/bin/dumb-init
 
-ADD 21-10-08-TOTVS_DBACCESS_BUILD_21.1.1.0_LINUX_X64.TAR.GZ /opt/totvs/dbaccess64
+ADD 22-03-07-TOTVS_DBACCESS_BUILD_21.1.1.1_LINUX_X64.TAR.GZ /opt/totvs/dbaccess64
 
 COPY /build /build
 
