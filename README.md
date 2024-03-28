@@ -1,3 +1,8 @@
+
+# Projeto descontinuado, recomendo o uso desse: https://bitbucket.org/felipe_raposo/docker-protheus-postgresql-microsoft-sql-server/src/master/
+
+
+
 # protheus-docker
 
 Tutorial: https://www.youtube.com/watch?v=wcMU0pqfZWA
